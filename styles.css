@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    --regular-font-size: 0.9375rem;
+}
+
+/* GLOBALS */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Spartan, Arial, sans-serif;
+    color: var(--dark-grayish-magenta);
+}
+
+p {
+    font-size: var(--regular-font-size);
+}
+
+/* HEADER STYLES */
+header {
+    width: 20rem;
+    text-align: center;
+    margin: 5rem auto 2.8125rem;
+}
+
+h1 {
+    font-size: 1.875rem;
+    line-height: 1;
+    color: var(--very-dark-magenta);
+    margin-bottom: 1.5rem; 
+}
+
+p.header-text {
+    font-weight: 500;
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+/* Reviews */
+.reviews {
+    width: 20.625rem;
+    margin: 0 auto 3.125rem;
+}
+
+.review {
+    background-color: var(--light-grayish-magenta);
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.stars {
+    width: 6.25rem;
+    height: 1rem;
+    margin: 0 auto;
+    background-image: url('/images/icon-star.svg');
+    background-repeat: space;
+}
+
+.review-text {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--very-dark-magenta);
+    margin-top: 1rem;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    width: 20.625rem;
+    margin: 0 auto 3.125rem;
+}
+
+.card {
+    background-color: var(--very-dark-magenta);
+    color: var(--White);
+    margin-bottom: 1rem;
+    padding: 2.5rem 1.875rem;
+    border-radius: 10px;
+}
+
+.card-header {
+    display: flex;
+    margin-bottom: 1.875rem;
+}
+
+.card-img {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+    border-radius: 50%;
+}
+
+.card-name-sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-sub {
+    font-size: 0.85rem;
+    color: var(--soft-pink);
+}
+
+.card-text {
+    line-height: 1.6;
+}
+
+/* TABLET STYLES */
+@media (min-width: 43.75rem) {
+    header {
+        width: 28rem;
+        text-align: center;
+        margin: 5rem auto 2.8125rem;
+    }
+
+    .review-text {
+        margin: 1rem 0 0;
+    }
+}
+
+/* DESKTOP STYLES */
+@media (min-width: 62rem) {
+    /* top container styles */
+    .top { 
+        width: 69.375rem;
+        margin: 7.9375rem auto 4.625rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* header content styles */
+    header { 
+        margin-right: 8.125rem;
+        flex-basis: 40%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: left;
+        width: auto;
+        margin: 0 0 1rem; 
+    }
+
+    p.header-text {
+        text-align: left;
+        line-height: 1.6;
+        width: auto;
+        margin: 0;
+    }
+
+    /* reviews styles */
+    .reviews {
+        width: auto;
+    }
+
+    .review {
+        width: 28.125rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .review:nth-child(2) {margin-left: 3.125rem;}
+    .review:nth-child(3) {margin-left: calc(3.125rem * 2);}
+
+    .review-text {
+        font-size: 0.8125rem;
+        text-align: left;
+        line-height: 1rem;
+        margin: 0rem;
+    }
+
+    .stars {
+        margin: 0 2.1875rem 0;
+    }
+
+    /* TESTIMONIALS STYLES */
+    .testimonials {
+        width: 69.375rem;
+        margin: 0 auto 7.9375rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: ;
+        gap: 2rem;
+        position: relative;
+    }
+
+    .card {
+        margin-bottom: 0;
+    }
+
+    .card:nth-child(2) {
+        position: relative;
+        top: 1.25rem;
+    }
+
+    .card:nth-child(3) {
+        position: relative;
+        top: 2.5rem;
+    }
+
+    .card-text {
+        font-size: 0.8125rem;
+    }
+}
